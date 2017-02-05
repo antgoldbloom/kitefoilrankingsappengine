@@ -1,0 +1,2080 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Kitefoil  Rankings</title>
+</head>
+<body>
+<h1>Kitefoil Rankings</h1>
+<p><a href="https://www.kaggle.com/antgoldbloom/d/antgoldbloom/2016-kitefoil-race-results/trueskill-for-kitefoil-rankings-by-race">Code, methodology and assumptions.</a></p>
+<i>Last update: 25 January 2017</i>
+
+<table border="1" class="dataframe">
+    <thead>
+        <tr style="text-align: right;">
+            <th></th>
+            <th>Name</th>
+            <th>mu_minus_3sigma</th>
+            <th>NumRaces</th>
+            <th>Rating</th>
+        </tr>
+        <tr>
+            <th>Rank</th>
+            <th></th>
+            <th></th>
+            <th></th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <th>1</th>
+            <td>Nico Parlier</td>
+            <td>55.146291</td>
+            <td>75</td>
+            <td>trueskill.Rating(mu=58.840, sigma=1.231)</td>
+        </tr>
+        <tr>
+            <th>2</th>
+            <td>Johnny Heineken</td>
+            <td>52.620493</td>
+            <td>33</td>
+            <td>trueskill.Rating(mu=56.078, sigma=1.153)</td>
+        </tr>
+        <tr>
+            <th>3</th>
+            <td>Oliver Bridge</td>
+            <td>50.017202</td>
+            <td>91</td>
+            <td>trueskill.Rating(mu=53.476, sigma=1.153)</td>
+        </tr>
+        <tr>
+            <th>4</th>
+            <td>Maxime Nocher</td>
+            <td>49.488130</td>
+            <td>68</td>
+            <td>trueskill.Rating(mu=52.667, sigma=1.060)</td>
+        </tr>
+        <tr>
+            <th>5</th>
+            <td>Axel Mazella</td>
+            <td>48.294110</td>
+            <td>62</td>
+            <td>trueskill.Rating(mu=51.426, sigma=1.044)</td>
+        </tr>
+        <tr>
+            <th>6</th>
+            <td>Joey Pasquali</td>
+            <td>45.424152</td>
+            <td>31</td>
+            <td>trueskill.Rating(mu=49.175, sigma=1.250)</td>
+        </tr>
+        <tr>
+            <th>7</th>
+            <td>Rikki Leccese</td>
+            <td>44.804041</td>
+            <td>67</td>
+            <td>trueskill.Rating(mu=47.864, sigma=1.020)</td>
+        </tr>
+        <tr>
+            <th>8</th>
+            <td>Florian Trittel Paul</td>
+            <td>43.009154</td>
+            <td>77</td>
+            <td>trueskill.Rating(mu=46.170, sigma=1.054)</td>
+        </tr>
+        <tr>
+            <th>9</th>
+            <td>Julien Kerneur</td>
+            <td>42.669926</td>
+            <td>32</td>
+            <td>trueskill.Rating(mu=46.033, sigma=1.121)</td>
+        </tr>
+        <tr>
+            <th>10</th>
+            <td>Nico Landauer</td>
+            <td>42.066612</td>
+            <td>70</td>
+            <td>trueskill.Rating(mu=45.261, sigma=1.065)</td>
+        </tr>
+        <tr>
+            <th>11</th>
+            <td>Florian Gruber</td>
+            <td>41.887501</td>
+            <td>92</td>
+            <td>trueskill.Rating(mu=45.000, sigma=1.037)</td>
+        </tr>
+        <tr>
+            <th>12</th>
+            <td>Stefaans Viljoen</td>
+            <td>40.392102</td>
+            <td>19</td>
+            <td>trueskill.Rating(mu=44.317, sigma=1.308)</td>
+        </tr>
+        <tr>
+            <th>13</th>
+            <td>Guy Bridge</td>
+            <td>40.045793</td>
+            <td>45</td>
+            <td>trueskill.Rating(mu=43.190, sigma=1.048)</td>
+        </tr>
+        <tr>
+            <th>14</th>
+            <td>Titouan Galea</td>
+            <td>38.197753</td>
+            <td>45</td>
+            <td>trueskill.Rating(mu=41.219, sigma=1.007)</td>
+        </tr>
+        <tr>
+            <th>15</th>
+            <td>Maks Zakowski</td>
+            <td>38.028690</td>
+            <td>32</td>
+            <td>trueskill.Rating(mu=41.118, sigma=1.030)</td>
+        </tr>
+        <tr>
+            <th>16</th>
+            <td>Zack Marks</td>
+            <td>37.584275</td>
+            <td>29</td>
+            <td>trueskill.Rating(mu=40.819, sigma=1.078)</td>
+        </tr>
+        <tr>
+            <th>17</th>
+            <td>Toni Vodisek</td>
+            <td>37.294366</td>
+            <td>80</td>
+            <td>trueskill.Rating(mu=40.236, sigma=0.981)</td>
+        </tr>
+        <tr>
+            <th>18</th>
+            <td>Theo De-Ramecourt</td>
+            <td>36.824316</td>
+            <td>25</td>
+            <td>trueskill.Rating(mu=40.041, sigma=1.072)</td>
+        </tr>
+        <tr>
+            <th>19</th>
+            <td>Martin Dolenc</td>
+            <td>36.807481</td>
+            <td>72</td>
+            <td>trueskill.Rating(mu=39.856, sigma=1.016)</td>
+        </tr>
+        <tr>
+            <th>20</th>
+            <td>Adam Withington</td>
+            <td>36.624458</td>
+            <td>20</td>
+            <td>trueskill.Rating(mu=40.008, sigma=1.128)</td>
+        </tr>
+        <tr>
+            <th>21</th>
+            <td>Adrian Geislinger</td>
+            <td>36.088101</td>
+            <td>65</td>
+            <td>trueskill.Rating(mu=39.048, sigma=0.986)</td>
+        </tr>
+        <tr>
+            <th>22</th>
+            <td>Matt Taggart</td>
+            <td>36.082020</td>
+            <td>32</td>
+            <td>trueskill.Rating(mu=39.150, sigma=1.023)</td>
+        </tr>
+        <tr>
+            <th>23</th>
+            <td>Mario Calbucci</td>
+            <td>35.332125</td>
+            <td>34</td>
+            <td>trueskill.Rating(mu=38.394, sigma=1.021)</td>
+        </tr>
+        <tr>
+            <th>24</th>
+            <td>Jean De Falbaire</td>
+            <td>34.617685</td>
+            <td>44</td>
+            <td>trueskill.Rating(mu=37.600, sigma=0.994)</td>
+        </tr>
+        <tr>
+            <th>25</th>
+            <td>Riley Gibbs</td>
+            <td>34.264284</td>
+            <td>34</td>
+            <td>trueskill.Rating(mu=37.476, sigma=1.071)</td>
+        </tr>
+        <tr>
+            <th>26</th>
+            <td>Blazej Ozog</td>
+            <td>33.957943</td>
+            <td>42</td>
+            <td>trueskill.Rating(mu=36.937, sigma=0.993)</td>
+        </tr>
+        <tr>
+            <th>27</th>
+            <td>Jon Modica</td>
+            <td>32.968758</td>
+            <td>39</td>
+            <td>trueskill.Rating(mu=36.080, sigma=1.037)</td>
+        </tr>
+        <tr>
+            <th>28</th>
+            <td>Jacob Olivier</td>
+            <td>32.911434</td>
+            <td>46</td>
+            <td>trueskill.Rating(mu=35.963, sigma=1.017)</td>
+        </tr>
+        <tr>
+            <th>29</th>
+            <td>Bruno Lobo</td>
+            <td>32.774517</td>
+            <td>24</td>
+            <td>trueskill.Rating(mu=35.936, sigma=1.054)</td>
+        </tr>
+        <tr>
+            <th>30</th>
+            <td>Benni Boelli</td>
+            <td>32.552939</td>
+            <td>23</td>
+            <td>trueskill.Rating(mu=35.948, sigma=1.132)</td>
+        </tr>
+        <tr>
+            <th>31</th>
+            <td>Andy Hansen</td>
+            <td>31.121185</td>
+            <td>62</td>
+            <td>trueskill.Rating(mu=34.412, sigma=1.097)</td>
+        </tr>
+        <tr>
+            <th>32</th>
+            <td>Theo Lhostis</td>
+            <td>31.119548</td>
+            <td>72</td>
+            <td>trueskill.Rating(mu=34.035, sigma=0.972)</td>
+        </tr>
+        <tr>
+            <th>33</th>
+            <td>Andrea Beverino</td>
+            <td>30.618926</td>
+            <td>30</td>
+            <td>trueskill.Rating(mu=33.667, sigma=1.016)</td>
+        </tr>
+        <tr>
+            <th>34</th>
+            <td>Michael Brodeur</td>
+            <td>30.117383</td>
+            <td>9</td>
+            <td>trueskill.Rating(mu=35.173, sigma=1.685)</td>
+        </tr>
+        <tr>
+            <th>35</th>
+            <td>Sam Bullock</td>
+            <td>30.039892</td>
+            <td>46</td>
+            <td>trueskill.Rating(mu=33.085, sigma=1.015)</td>
+        </tr>
+        <tr>
+            <th>36</th>
+            <td>Seth Besse</td>
+            <td>29.956718</td>
+            <td>25</td>
+            <td>trueskill.Rating(mu=33.366, sigma=1.136)</td>
+        </tr>
+        <tr>
+            <th>37</th>
+            <td>Kevin Reali</td>
+            <td>29.896677</td>
+            <td>17</td>
+            <td>trueskill.Rating(mu=33.544, sigma=1.216)</td>
+        </tr>
+        <tr>
+            <th>38</th>
+            <td>Kai Calder</td>
+            <td>29.655700</td>
+            <td>36</td>
+            <td>trueskill.Rating(mu=32.929, sigma=1.091)</td>
+        </tr>
+        <tr>
+            <th>39</th>
+            <td>Alejandro Climent Hernandez</td>
+            <td>29.457718</td>
+            <td>70</td>
+            <td>trueskill.Rating(mu=32.471, sigma=1.004)</td>
+        </tr>
+        <tr>
+            <th>40</th>
+            <td>Jamie Douglas</td>
+            <td>29.453904</td>
+            <td>9</td>
+            <td>trueskill.Rating(mu=34.432, sigma=1.659)</td>
+        </tr>
+        <tr>
+            <th>41</th>
+            <td>Denis Taradin</td>
+            <td>29.166013</td>
+            <td>48</td>
+            <td>trueskill.Rating(mu=32.133, sigma=0.989)</td>
+        </tr>
+        <tr>
+            <th>42</th>
+            <td>Kieran Le Borgne</td>
+            <td>28.602685</td>
+            <td>56</td>
+            <td>trueskill.Rating(mu=31.507, sigma=0.968)</td>
+        </tr>
+        <tr>
+            <th>43</th>
+            <td>Martin Turbil</td>
+            <td>28.176589</td>
+            <td>30</td>
+            <td>trueskill.Rating(mu=31.278, sigma=1.034)</td>
+        </tr>
+        <tr>
+            <th>44</th>
+            <td>Alexander Bachev</td>
+            <td>28.137743</td>
+            <td>26</td>
+            <td>trueskill.Rating(mu=31.265, sigma=1.043)</td>
+        </tr>
+        <tr>
+            <th>45</th>
+            <td>Ty Reed</td>
+            <td>28.066228</td>
+            <td>23</td>
+            <td>trueskill.Rating(mu=31.498, sigma=1.144)</td>
+        </tr>
+        <tr>
+            <th>46</th>
+            <td>Jerome Bonieux</td>
+            <td>27.987565</td>
+            <td>34</td>
+            <td>trueskill.Rating(mu=30.990, sigma=1.001)</td>
+        </tr>
+        <tr>
+            <th>47</th>
+            <td>Marvin Baumeister Schoenian</td>
+            <td>27.103232</td>
+            <td>107</td>
+            <td>trueskill.Rating(mu=30.218, sigma=1.038)</td>
+        </tr>
+        <tr>
+            <th>48</th>
+            <td>Alex Caizergues</td>
+            <td>27.092899</td>
+            <td>36</td>
+            <td>trueskill.Rating(mu=30.094, sigma=1.000)</td>
+        </tr>
+        <tr>
+            <th>49</th>
+            <td>Ejder Ginyol</td>
+            <td>26.415549</td>
+            <td>29</td>
+            <td>trueskill.Rating(mu=29.678, sigma=1.087)</td>
+        </tr>
+        <tr>
+            <th>50</th>
+            <td>Daniela Moroz</td>
+            <td>26.305862</td>
+            <td>68</td>
+            <td>trueskill.Rating(mu=29.258, sigma=0.984)</td>
+        </tr>
+        <tr>
+            <th>51</th>
+            <td>Leif Given</td>
+            <td>26.160576</td>
+            <td>9</td>
+            <td>trueskill.Rating(mu=30.827, sigma=1.555)</td>
+        </tr>
+        <tr>
+            <th>52</th>
+            <td>Xantos Villegas</td>
+            <td>26.036607</td>
+            <td>25</td>
+            <td>trueskill.Rating(mu=29.270, sigma=1.078)</td>
+        </tr>
+        <tr>
+            <th>53</th>
+            <td>Giulio Chiti</td>
+            <td>25.530642</td>
+            <td>22</td>
+            <td>trueskill.Rating(mu=28.759, sigma=1.076)</td>
+        </tr>
+        <tr>
+            <th>54</th>
+            <td>Benjamin Petit</td>
+            <td>25.265747</td>
+            <td>63</td>
+            <td>trueskill.Rating(mu=28.164, sigma=0.966)</td>
+        </tr>
+        <tr>
+            <th>55</th>
+            <td>Mateo Mouquet</td>
+            <td>24.572567</td>
+            <td>14</td>
+            <td>trueskill.Rating(mu=28.319, sigma=1.249)</td>
+        </tr>
+        <tr>
+            <th>56</th>
+            <td>Oliver Hansen</td>
+            <td>24.549871</td>
+            <td>46</td>
+            <td>trueskill.Rating(mu=27.543, sigma=0.998)</td>
+        </tr>
+        <tr>
+            <th>57</th>
+            <td>Jordan Girdis</td>
+            <td>24.461183</td>
+            <td>28</td>
+            <td>trueskill.Rating(mu=27.827, sigma=1.122)</td>
+        </tr>
+        <tr>
+            <th>58</th>
+            <td>Andrew Cooksey</td>
+            <td>24.418620</td>
+            <td>34</td>
+            <td>trueskill.Rating(mu=27.563, sigma=1.048)</td>
+        </tr>
+        <tr>
+            <th>59</th>
+            <td>James Johnsen</td>
+            <td>24.271081</td>
+            <td>55</td>
+            <td>trueskill.Rating(mu=27.254, sigma=0.994)</td>
+        </tr>
+        <tr>
+            <th>60</th>
+            <td>John Von Tesmar</td>
+            <td>23.691710</td>
+            <td>13</td>
+            <td>trueskill.Rating(mu=27.894, sigma=1.401)</td>
+        </tr>
+        <tr>
+            <th>61</th>
+            <td>Mani Bisschops</td>
+            <td>23.642929</td>
+            <td>86</td>
+            <td>trueskill.Rating(mu=26.724, sigma=1.027)</td>
+        </tr>
+        <tr>
+            <th>62</th>
+            <td>Jason D'Agostino</td>
+            <td>23.323949</td>
+            <td>17</td>
+            <td>trueskill.Rating(mu=26.884, sigma=1.187)</td>
+        </tr>
+        <tr>
+            <th>63</th>
+            <td>Jannis Mauss</td>
+            <td>23.306057</td>
+            <td>6</td>
+            <td>trueskill.Rating(mu=29.225, sigma=1.973)</td>
+        </tr>
+        <tr>
+            <th>64</th>
+            <td>Nicholas Leason</td>
+            <td>22.232912</td>
+            <td>8</td>
+            <td>trueskill.Rating(mu=26.974, sigma=1.580)</td>
+        </tr>
+        <tr>
+            <th>65</th>
+            <td>Mateo Vieujot</td>
+            <td>21.921670</td>
+            <td>25</td>
+            <td>trueskill.Rating(mu=25.082, sigma=1.054)</td>
+        </tr>
+        <tr>
+            <th>66</th>
+            <td>Peter Muller</td>
+            <td>21.614551</td>
+            <td>6</td>
+            <td>trueskill.Rating(mu=27.515, sigma=1.967)</td>
+        </tr>
+        <tr>
+            <th>67</th>
+            <td>Lucas&nbsp;Rey</td>
+            <td>21.517428</td>
+            <td>14</td>
+            <td>trueskill.Rating(mu=25.238, sigma=1.240)</td>
+        </tr>
+        <tr>
+            <th>68</th>
+            <td>Tomek Janiak</td>
+            <td>21.294922</td>
+            <td>8</td>
+            <td>trueskill.Rating(mu=25.857, sigma=1.521)</td>
+        </tr>
+        <tr>
+            <th>69</th>
+            <td>Ivan Doronin</td>
+            <td>21.156487</td>
+            <td>22</td>
+            <td>trueskill.Rating(mu=24.397, sigma=1.080)</td>
+        </tr>
+        <tr>
+            <th>70</th>
+            <td>James Mcgrath</td>
+            <td>21.109240</td>
+            <td>18</td>
+            <td>trueskill.Rating(mu=24.692, sigma=1.194)</td>
+        </tr>
+        <tr>
+            <th>71</th>
+            <td>Igor Malenko</td>
+            <td>21.048186</td>
+            <td>14</td>
+            <td>trueskill.Rating(mu=24.723, sigma=1.225)</td>
+        </tr>
+        <tr>
+            <th>72</th>
+            <td>Steffen Ovind</td>
+            <td>20.685791</td>
+            <td>8</td>
+            <td>trueskill.Rating(mu=25.955, sigma=1.757)</td>
+        </tr>
+        <tr>
+            <th>73</th>
+            <td>Peter Martel</td>
+            <td>20.652533</td>
+            <td>13</td>
+            <td>trueskill.Rating(mu=24.447, sigma=1.265)</td>
+        </tr>
+        <tr>
+            <th>74</th>
+            <td>Kari Eisenhut</td>
+            <td>20.549700</td>
+            <td>45</td>
+            <td>trueskill.Rating(mu=23.470, sigma=0.974)</td>
+        </tr>
+        <tr>
+            <th>75</th>
+            <td>Normand Mcguire</td>
+            <td>20.492268</td>
+            <td>17</td>
+            <td>trueskill.Rating(mu=24.098, sigma=1.202)</td>
+        </tr>
+        <tr>
+            <th>76</th>
+            <td>Thomas Lombardo</td>
+            <td>20.452347</td>
+            <td>17</td>
+            <td>trueskill.Rating(mu=23.909, sigma=1.152)</td>
+        </tr>
+        <tr>
+            <th>77</th>
+            <td>Val Smith</td>
+            <td>20.336652</td>
+            <td>9</td>
+            <td>trueskill.Rating(mu=24.909, sigma=1.524)</td>
+        </tr>
+        <tr>
+            <th>78</th>
+            <td>Victor Bachichet</td>
+            <td>20.211773</td>
+            <td>30</td>
+            <td>trueskill.Rating(mu=23.264, sigma=1.017)</td>
+        </tr>
+        <tr>
+            <th>79</th>
+            <td>Arthur Lhez</td>
+            <td>20.083566</td>
+            <td>12</td>
+            <td>trueskill.Rating(mu=24.037, sigma=1.318)</td>
+        </tr>
+        <tr>
+            <th>80</th>
+            <td>Valerio Venturi</td>
+            <td>19.986685</td>
+            <td>22</td>
+            <td>trueskill.Rating(mu=23.207, sigma=1.073)</td>
+        </tr>
+        <tr>
+            <th>81</th>
+            <td>Roman Lyubimtsev</td>
+            <td>19.853193</td>
+            <td>43</td>
+            <td>trueskill.Rating(mu=22.797, sigma=0.981)</td>
+        </tr>
+        <tr>
+            <th>82</th>
+            <td>Elena Kalinina</td>
+            <td>19.698771</td>
+            <td>79</td>
+            <td>trueskill.Rating(mu=22.611, sigma=0.971)</td>
+        </tr>
+        <tr>
+            <th>83</th>
+            <td>Matt Reinhardt</td>
+            <td>19.660163</td>
+            <td>26</td>
+            <td>trueskill.Rating(mu=22.845, sigma=1.061)</td>
+        </tr>
+        <tr>
+            <th>84</th>
+            <td>Luca Marcis</td>
+            <td>19.420137</td>
+            <td>14</td>
+            <td>trueskill.Rating(mu=23.153, sigma=1.244)</td>
+        </tr>
+        <tr>
+            <th>85</th>
+            <td>Thomas Vaclavik</td>
+            <td>19.139905</td>
+            <td>9</td>
+            <td>trueskill.Rating(mu=23.592, sigma=1.484)</td>
+        </tr>
+        <tr>
+            <th>86</th>
+            <td>Alexis Delquie</td>
+            <td>19.051786</td>
+            <td>39</td>
+            <td>trueskill.Rating(mu=22.003, sigma=0.984)</td>
+        </tr>
+        <tr>
+            <th>87</th>
+            <td>Nevin Sayre</td>
+            <td>18.985231</td>
+            <td>9</td>
+            <td>trueskill.Rating(mu=23.714, sigma=1.576)</td>
+        </tr>
+        <tr>
+            <th>88</th>
+            <td>Chip Wasson</td>
+            <td>18.942648</td>
+            <td>32</td>
+            <td>trueskill.Rating(mu=22.108, sigma=1.055)</td>
+        </tr>
+        <tr>
+            <th>89</th>
+            <td>Dominik Zimmerman</td>
+            <td>18.866790</td>
+            <td>5</td>
+            <td>trueskill.Rating(mu=25.322, sigma=2.152)</td>
+        </tr>
+        <tr>
+            <th>90</th>
+            <td>Dario Piras</td>
+            <td>18.739978</td>
+            <td>13</td>
+            <td>trueskill.Rating(mu=22.574, sigma=1.278)</td>
+        </tr>
+        <tr>
+            <th>91</th>
+            <td>Stephanie Bridge</td>
+            <td>18.722876</td>
+            <td>53</td>
+            <td>trueskill.Rating(mu=21.738, sigma=1.005)</td>
+        </tr>
+        <tr>
+            <th>92</th>
+            <td>Nicolas Caillou</td>
+            <td>18.666740</td>
+            <td>9</td>
+            <td>trueskill.Rating(mu=23.134, sigma=1.489)</td>
+        </tr>
+        <tr>
+            <th>93</th>
+            <td>Will Morris</td>
+            <td>18.649169</td>
+            <td>6</td>
+            <td>trueskill.Rating(mu=24.449, sigma=1.933)</td>
+        </tr>
+        <tr>
+            <th>94</th>
+            <td>Raz Sayre</td>
+            <td>18.540781</td>
+            <td>7</td>
+            <td>trueskill.Rating(mu=23.537, sigma=1.665)</td>
+        </tr>
+        <tr>
+            <th>95</th>
+            <td>Tomasz Glazik</td>
+            <td>18.459318</td>
+            <td>28</td>
+            <td>trueskill.Rating(mu=21.535, sigma=1.025)</td>
+        </tr>
+        <tr>
+            <th>96</th>
+            <td>Alty Frisby</td>
+            <td>18.380791</td>
+            <td>33</td>
+            <td>trueskill.Rating(mu=21.507, sigma=1.042)</td>
+        </tr>
+        <tr>
+            <th>97</th>
+            <td>Anthony Picard</td>
+            <td>18.175548</td>
+            <td>17</td>
+            <td>trueskill.Rating(mu=21.635, sigma=1.153)</td>
+        </tr>
+        <tr>
+            <th>98</th>
+            <td>Vadim Polonsky</td>
+            <td>18.047461</td>
+            <td>26</td>
+            <td>trueskill.Rating(mu=21.231, sigma=1.061)</td>
+        </tr>
+        <tr>
+            <th>99</th>
+            <td>Jan Blaesino</td>
+            <td>17.988602</td>
+            <td>14</td>
+            <td>trueskill.Rating(mu=22.062, sigma=1.358)</td>
+        </tr>
+        <tr>
+            <th>100</th>
+            <td>David Eberhardt</td>
+            <td>17.985420</td>
+            <td>26</td>
+            <td>trueskill.Rating(mu=21.176, sigma=1.063)</td>
+        </tr>
+        <tr>
+            <th>101</th>
+            <td>Silvio Aubry</td>
+            <td>17.976379</td>
+            <td>6</td>
+            <td>trueskill.Rating(mu=23.200, sigma=1.741)</td>
+        </tr>
+        <tr>
+            <th>102</th>
+            <td>William Morris</td>
+            <td>17.699926</td>
+            <td>13</td>
+            <td>trueskill.Rating(mu=21.501, sigma=1.267)</td>
+        </tr>
+        <tr>
+            <th>103</th>
+            <td>Herve Rousseau</td>
+            <td>17.617470</td>
+            <td>22</td>
+            <td>trueskill.Rating(mu=20.867, sigma=1.083)</td>
+        </tr>
+        <tr>
+            <th>104</th>
+            <td>George Hradil</td>
+            <td>17.603299</td>
+            <td>25</td>
+            <td>trueskill.Rating(mu=20.794, sigma=1.064)</td>
+        </tr>
+        <tr>
+            <th>105</th>
+            <td>Jalen Andreatta</td>
+            <td>17.529012</td>
+            <td>41</td>
+            <td>trueskill.Rating(mu=20.557, sigma=1.009)</td>
+        </tr>
+        <tr>
+            <th>106</th>
+            <td>Reinhold Gehrer</td>
+            <td>17.505602</td>
+            <td>6</td>
+            <td>trueskill.Rating(mu=23.229, sigma=1.908)</td>
+        </tr>
+        <tr>
+            <th>107</th>
+            <td>Amil Kabil</td>
+            <td>17.503970</td>
+            <td>54</td>
+            <td>trueskill.Rating(mu=20.508, sigma=1.001)</td>
+        </tr>
+        <tr>
+            <th>108</th>
+            <td>Dor&nbsp;Zarka</td>
+            <td>17.334469</td>
+            <td>14</td>
+            <td>trueskill.Rating(mu=21.091, sigma=1.252)</td>
+        </tr>
+        <tr>
+            <th>109</th>
+            <td>Martin Broesbel</td>
+            <td>17.084662</td>
+            <td>8</td>
+            <td>trueskill.Rating(mu=22.154, sigma=1.690)</td>
+        </tr>
+        <tr>
+            <th>110</th>
+            <td>Alexia Fancelli</td>
+            <td>17.060181</td>
+            <td>62</td>
+            <td>trueskill.Rating(mu=19.984, sigma=0.975)</td>
+        </tr>
+        <tr>
+            <th>111</th>
+            <td>Sebastien Dol</td>
+            <td>17.039613</td>
+            <td>13</td>
+            <td>trueskill.Rating(mu=20.918, sigma=1.293)</td>
+        </tr>
+        <tr>
+            <th>112</th>
+            <td>Aaron Mcclearnon</td>
+            <td>16.320862</td>
+            <td>15</td>
+            <td>trueskill.Rating(mu=20.016, sigma=1.232)</td>
+        </tr>
+        <tr>
+            <th>113</th>
+            <td>Martin Jensen</td>
+            <td>16.140557</td>
+            <td>21</td>
+            <td>trueskill.Rating(mu=19.491, sigma=1.117)</td>
+        </tr>
+        <tr>
+            <th>114</th>
+            <td>Pete Mckewen</td>
+            <td>16.088546</td>
+            <td>33</td>
+            <td>trueskill.Rating(mu=19.168, sigma=1.026)</td>
+        </tr>
+        <tr>
+            <th>115</th>
+            <td>Max Taylor</td>
+            <td>15.790344</td>
+            <td>12</td>
+            <td>trueskill.Rating(mu=20.170, sigma=1.460)</td>
+        </tr>
+        <tr>
+            <th>116</th>
+            <td>Maicol Borghetti</td>
+            <td>15.780088</td>
+            <td>12</td>
+            <td>trueskill.Rating(mu=19.746, sigma=1.322)</td>
+        </tr>
+        <tr>
+            <th>117</th>
+            <td>Simone Vannucci</td>
+            <td>15.686179</td>
+            <td>20</td>
+            <td>trueskill.Rating(mu=19.089, sigma=1.134)</td>
+        </tr>
+        <tr>
+            <th>118</th>
+            <td>Gregory Bardinet</td>
+            <td>15.674583</td>
+            <td>9</td>
+            <td>trueskill.Rating(mu=20.165, sigma=1.497)</td>
+        </tr>
+        <tr>
+            <th>119</th>
+            <td>Brian Brenner</td>
+            <td>15.674372</td>
+            <td>22</td>
+            <td>trueskill.Rating(mu=18.967, sigma=1.098)</td>
+        </tr>
+        <tr>
+            <th>120</th>
+            <td>Enrico Tonon</td>
+            <td>15.472307</td>
+            <td>21</td>
+            <td>trueskill.Rating(mu=18.736, sigma=1.088)</td>
+        </tr>
+        <tr>
+            <th>121</th>
+            <td>Connor Bainbridge</td>
+            <td>15.382644</td>
+            <td>13</td>
+            <td>trueskill.Rating(mu=19.146, sigma=1.254)</td>
+        </tr>
+        <tr>
+            <th>122</th>
+            <td>Jean-Guillaume Rivaud</td>
+            <td>15.344446</td>
+            <td>14</td>
+            <td>trueskill.Rating(mu=19.073, sigma=1.243)</td>
+        </tr>
+        <tr>
+            <th>123</th>
+            <td>Will James</td>
+            <td>15.170460</td>
+            <td>23</td>
+            <td>trueskill.Rating(mu=18.396, sigma=1.075)</td>
+        </tr>
+        <tr>
+            <th>124</th>
+            <td>Rasmus Sayre</td>
+            <td>15.109904</td>
+            <td>9</td>
+            <td>trueskill.Rating(mu=19.683, sigma=1.524)</td>
+        </tr>
+        <tr>
+            <th>125</th>
+            <td>Brian Porter</td>
+            <td>14.766168</td>
+            <td>11</td>
+            <td>trueskill.Rating(mu=18.924, sigma=1.386)</td>
+        </tr>
+        <tr>
+            <th>126</th>
+            <td>Sylvain Hoceini</td>
+            <td>14.563736</td>
+            <td>9</td>
+            <td>trueskill.Rating(mu=19.010, sigma=1.482)</td>
+        </tr>
+        <tr>
+            <th>127</th>
+            <td>Enzo Pineiro</td>
+            <td>14.523921</td>
+            <td>15</td>
+            <td>trueskill.Rating(mu=18.146, sigma=1.207)</td>
+        </tr>
+        <tr>
+            <th>128</th>
+            <td>Drew Malcom</td>
+            <td>14.327298</td>
+            <td>21</td>
+            <td>trueskill.Rating(mu=17.664, sigma=1.112)</td>
+        </tr>
+        <tr>
+            <th>129</th>
+            <td>Julian Hein</td>
+            <td>14.252880</td>
+            <td>6</td>
+            <td>trueskill.Rating(mu=19.748, sigma=1.832)</td>
+        </tr>
+        <tr>
+            <th>130</th>
+            <td>Anthony Goldbloom</td>
+            <td>14.099529</td>
+            <td>27</td>
+            <td>trueskill.Rating(mu=17.273, sigma=1.058)</td>
+        </tr>
+        <tr>
+            <th>131</th>
+            <td>Armagan Ersolak</td>
+            <td>13.983250</td>
+            <td>6</td>
+            <td>trueskill.Rating(mu=19.213, sigma=1.743)</td>
+        </tr>
+        <tr>
+            <th>132</th>
+            <td>Ariel Poler</td>
+            <td>13.868174</td>
+            <td>12</td>
+            <td>trueskill.Rating(mu=17.790, sigma=1.307)</td>
+        </tr>
+        <tr>
+            <th>133</th>
+            <td>Theo Dutrieux</td>
+            <td>13.819017</td>
+            <td>9</td>
+            <td>trueskill.Rating(mu=18.263, sigma=1.481)</td>
+        </tr>
+        <tr>
+            <th>134</th>
+            <td>Elias Ouahmid</td>
+            <td>13.696673</td>
+            <td>19</td>
+            <td>trueskill.Rating(mu=17.168, sigma=1.157)</td>
+        </tr>
+        <tr>
+            <th>135</th>
+            <td>Gunnar Biniasch</td>
+            <td>13.679345</td>
+            <td>8</td>
+            <td>trueskill.Rating(mu=18.250, sigma=1.523)</td>
+        </tr>
+        <tr>
+            <th>136</th>
+            <td>Antoine Nahon</td>
+            <td>13.654365</td>
+            <td>9</td>
+            <td>trueskill.Rating(mu=18.103, sigma=1.483)</td>
+        </tr>
+        <tr>
+            <th>137</th>
+            <td>Ole Kjaer</td>
+            <td>13.606993</td>
+            <td>8</td>
+            <td>trueskill.Rating(mu=18.652, sigma=1.682)</td>
+        </tr>
+        <tr>
+            <th>138</th>
+            <td>Atte Kappel</td>
+            <td>13.155386</td>
+            <td>6</td>
+            <td>trueskill.Rating(mu=18.656, sigma=1.833)</td>
+        </tr>
+        <tr>
+            <th>139</th>
+            <td>Hector Paturau</td>
+            <td>13.067413</td>
+            <td>14</td>
+            <td>trueskill.Rating(mu=16.809, sigma=1.247)</td>
+        </tr>
+        <tr>
+            <th>140</th>
+            <td>Mirco Casale</td>
+            <td>12.981550</td>
+            <td>13</td>
+            <td>trueskill.Rating(mu=16.887, sigma=1.302)</td>
+        </tr>
+        <tr>
+            <th>141</th>
+            <td>Tom Lanagan</td>
+            <td>12.960512</td>
+            <td>9</td>
+            <td>trueskill.Rating(mu=17.548, sigma=1.529)</td>
+        </tr>
+        <tr>
+            <th>142</th>
+            <td>Gina Hewson</td>
+            <td>12.956479</td>
+            <td>111</td>
+            <td>trueskill.Rating(mu=15.976, sigma=1.006)</td>
+        </tr>
+        <tr>
+            <th>143</th>
+            <td>Will Cyr</td>
+            <td>12.702792</td>
+            <td>25</td>
+            <td>trueskill.Rating(mu=16.046, sigma=1.114)</td>
+        </tr>
+        <tr>
+            <th>144</th>
+            <td>Jade O'Connor</td>
+            <td>12.644306</td>
+            <td>51</td>
+            <td>trueskill.Rating(mu=15.654, sigma=1.003)</td>
+        </tr>
+        <tr>
+            <th>145</th>
+            <td>Frederik Jorgensen</td>
+            <td>12.628235</td>
+            <td>8</td>
+            <td>trueskill.Rating(mu=17.766, sigma=1.713)</td>
+        </tr>
+        <tr>
+            <th>146</th>
+            <td>Sebastien Bourdon</td>
+            <td>12.586527</td>
+            <td>7</td>
+            <td>trueskill.Rating(mu=17.535, sigma=1.649)</td>
+        </tr>
+        <tr>
+            <th>147</th>
+            <td>Henrik Baerentsen</td>
+            <td>12.428753</td>
+            <td>19</td>
+            <td>trueskill.Rating(mu=15.859, sigma=1.143)</td>
+        </tr>
+        <tr>
+            <th>148</th>
+            <td>Craig Rawson</td>
+            <td>12.218953</td>
+            <td>54</td>
+            <td>trueskill.Rating(mu=15.212, sigma=0.998)</td>
+        </tr>
+        <tr>
+            <th>149</th>
+            <td>Louise Delorme</td>
+            <td>12.005705</td>
+            <td>9</td>
+            <td>trueskill.Rating(mu=16.453, sigma=1.483)</td>
+        </tr>
+        <tr>
+            <th>150</th>
+            <td>Rogelio Basave</td>
+            <td>11.900747</td>
+            <td>9</td>
+            <td>trueskill.Rating(mu=16.927, sigma=1.675)</td>
+        </tr>
+        <tr>
+            <th>151</th>
+            <td>Ben Turner</td>
+            <td>11.872160</td>
+            <td>27</td>
+            <td>trueskill.Rating(mu=15.098, sigma=1.075)</td>
+        </tr>
+        <tr>
+            <th>152</th>
+            <td>Ariane Imbert</td>
+            <td>11.764506</td>
+            <td>22</td>
+            <td>trueskill.Rating(mu=15.099, sigma=1.112)</td>
+        </tr>
+        <tr>
+            <th>153</th>
+            <td>Sonny Swords</td>
+            <td>11.649452</td>
+            <td>17</td>
+            <td>trueskill.Rating(mu=15.212, sigma=1.187)</td>
+        </tr>
+        <tr>
+            <th>154</th>
+            <td>David Trewern</td>
+            <td>11.472434</td>
+            <td>17</td>
+            <td>trueskill.Rating(mu=15.286, sigma=1.271)</td>
+        </tr>
+        <tr>
+            <th>155</th>
+            <td>Ryan Palk</td>
+            <td>11.424328</td>
+            <td>41</td>
+            <td>trueskill.Rating(mu=14.473, sigma=1.016)</td>
+        </tr>
+        <tr>
+            <th>156</th>
+            <td>Claudio Cruz</td>
+            <td>11.179948</td>
+            <td>5</td>
+            <td>trueskill.Rating(mu=17.064, sigma=1.961)</td>
+        </tr>
+        <tr>
+            <th>157</th>
+            <td>Nik Ressig</td>
+            <td>11.007938</td>
+            <td>6</td>
+            <td>trueskill.Rating(mu=16.515, sigma=1.836)</td>
+        </tr>
+        <tr>
+            <th>158</th>
+            <td>Scott Whitehead</td>
+            <td>10.978614</td>
+            <td>50</td>
+            <td>trueskill.Rating(mu=14.024, sigma=1.015)</td>
+        </tr>
+        <tr>
+            <th>159</th>
+            <td>Antoine Jaubert</td>
+            <td>10.745492</td>
+            <td>4</td>
+            <td>trueskill.Rating(mu=17.581, sigma=2.279)</td>
+        </tr>
+        <tr>
+            <th>160</th>
+            <td>Sebastien Queney</td>
+            <td>10.730603</td>
+            <td>9</td>
+            <td>trueskill.Rating(mu=15.223, sigma=1.497)</td>
+        </tr>
+        <tr>
+            <th>161</th>
+            <td>Marco Calbucci</td>
+            <td>10.682580</td>
+            <td>15</td>
+            <td>trueskill.Rating(mu=14.369, sigma=1.229)</td>
+        </tr>
+        <tr>
+            <th>162</th>
+            <td>Jan Landl</td>
+            <td>10.625899</td>
+            <td>5</td>
+            <td>trueskill.Rating(mu=17.126, sigma=2.167)</td>
+        </tr>
+        <tr>
+            <th>163</th>
+            <td>Richard Bates</td>
+            <td>10.544160</td>
+            <td>28</td>
+            <td>trueskill.Rating(mu=13.661, sigma=1.039)</td>
+        </tr>
+        <tr>
+            <th>164</th>
+            <td>Malo Quernec</td>
+            <td>10.486225</td>
+            <td>9</td>
+            <td>trueskill.Rating(mu=14.981, sigma=1.498)</td>
+        </tr>
+        <tr>
+            <th>165</th>
+            <td>Anton Minaev</td>
+            <td>10.362848</td>
+            <td>6</td>
+            <td>trueskill.Rating(mu=15.632, sigma=1.756)</td>
+        </tr>
+        <tr>
+            <th>166</th>
+            <td>Jean-Pierre Valesa</td>
+            <td>10.339545</td>
+            <td>14</td>
+            <td>trueskill.Rating(mu=14.087, sigma=1.249)</td>
+        </tr>
+        <tr>
+            <th>167</th>
+            <td>Bradley Nixon</td>
+            <td>10.089231</td>
+            <td>23</td>
+            <td>trueskill.Rating(mu=13.320, sigma=1.077)</td>
+        </tr>
+        <tr>
+            <th>168</th>
+            <td>Petter Olstad</td>
+            <td>9.950036</td>
+            <td>17</td>
+            <td>trueskill.Rating(mu=13.523, sigma=1.191)</td>
+        </tr>
+        <tr>
+            <th>169</th>
+            <td>Nicholas Voss</td>
+            <td>9.860528</td>
+            <td>8</td>
+            <td>trueskill.Rating(mu=14.765, sigma=1.635)</td>
+        </tr>
+        <tr>
+            <th>170</th>
+            <td>Tim Mossholder</td>
+            <td>9.764174</td>
+            <td>19</td>
+            <td>trueskill.Rating(mu=13.332, sigma=1.189)</td>
+        </tr>
+        <tr>
+            <th>171</th>
+            <td>Anais Mai Desjardins</td>
+            <td>9.706081</td>
+            <td>10</td>
+            <td>trueskill.Rating(mu=14.458, sigma=1.584)</td>
+        </tr>
+        <tr>
+            <th>172</th>
+            <td>Katja Roose</td>
+            <td>9.598183</td>
+            <td>6</td>
+            <td>trueskill.Rating(mu=15.099, sigma=1.834)</td>
+        </tr>
+        <tr>
+            <th>173</th>
+            <td>Charles Morano</td>
+            <td>9.596734</td>
+            <td>12</td>
+            <td>trueskill.Rating(mu=13.658, sigma=1.354)</td>
+        </tr>
+        <tr>
+            <th>174</th>
+            <td>Craig Roberts</td>
+            <td>9.569433</td>
+            <td>4</td>
+            <td>trueskill.Rating(mu=16.369, sigma=2.267)</td>
+        </tr>
+        <tr>
+            <th>175</th>
+            <td>Mike Martin</td>
+            <td>9.561855</td>
+            <td>19</td>
+            <td>trueskill.Rating(mu=13.090, sigma=1.176)</td>
+        </tr>
+        <tr>
+            <th>176</th>
+            <td>Phillip Rowlands</td>
+            <td>9.475922</td>
+            <td>48</td>
+            <td>trueskill.Rating(mu=12.476, sigma=1.000)</td>
+        </tr>
+        <tr>
+            <th>177</th>
+            <td>Matt Cookson</td>
+            <td>9.468961</td>
+            <td>3</td>
+            <td>trueskill.Rating(mu=16.987, sigma=2.506)</td>
+        </tr>
+        <tr>
+            <th>178</th>
+            <td>Brad Walker</td>
+            <td>9.409703</td>
+            <td>3</td>
+            <td>trueskill.Rating(mu=16.888, sigma=2.493)</td>
+        </tr>
+        <tr>
+            <th>179</th>
+            <td>Torrin Bright</td>
+            <td>9.407980</td>
+            <td>3</td>
+            <td>trueskill.Rating(mu=16.976, sigma=2.523)</td>
+        </tr>
+        <tr>
+            <th>180</th>
+            <td>Michael Gilbreath</td>
+            <td>9.348836</td>
+            <td>16</td>
+            <td>trueskill.Rating(mu=12.961, sigma=1.204)</td>
+        </tr>
+        <tr>
+            <th>181</th>
+            <td>Teerawat Sudpumkaew</td>
+            <td>9.242608</td>
+            <td>6</td>
+            <td>trueskill.Rating(mu=14.541, sigma=1.766)</td>
+        </tr>
+        <tr>
+            <th>182</th>
+            <td>Pierric Dellapina</td>
+            <td>9.123649</td>
+            <td>9</td>
+            <td>trueskill.Rating(mu=13.593, sigma=1.490)</td>
+        </tr>
+        <tr>
+            <th>183</th>
+            <td>Tim Fitzgerald</td>
+            <td>9.021014</td>
+            <td>8</td>
+            <td>trueskill.Rating(mu=13.930, sigma=1.636)</td>
+        </tr>
+        <tr>
+            <th>184</th>
+            <td>Niels Haugaard</td>
+            <td>8.828423</td>
+            <td>5</td>
+            <td>trueskill.Rating(mu=15.115, sigma=2.095)</td>
+        </tr>
+        <tr>
+            <th>185</th>
+            <td>Bruno Dandine</td>
+            <td>8.656440</td>
+            <td>9</td>
+            <td>trueskill.Rating(mu=13.130, sigma=1.491)</td>
+        </tr>
+        <tr>
+            <th>186</th>
+            <td>Dedl Groebert</td>
+            <td>8.346130</td>
+            <td>6</td>
+            <td>trueskill.Rating(mu=13.868, sigma=1.841)</td>
+        </tr>
+        <tr>
+            <th>187</th>
+            <td>Leonie Meyer</td>
+            <td>8.212865</td>
+            <td>6</td>
+            <td>trueskill.Rating(mu=13.774, sigma=1.854)</td>
+        </tr>
+        <tr>
+            <th>188</th>
+            <td>Zack Kaplan</td>
+            <td>8.200554</td>
+            <td>8</td>
+            <td>trueskill.Rating(mu=12.925, sigma=1.575)</td>
+        </tr>
+        <tr>
+            <th>189</th>
+            <td>Felix Louis N'Jai</td>
+            <td>7.965045</td>
+            <td>18</td>
+            <td>trueskill.Rating(mu=11.530, sigma=1.188)</td>
+        </tr>
+        <tr>
+            <th>190</th>
+            <td>Karsten Kromann</td>
+            <td>7.817697</td>
+            <td>8</td>
+            <td>trueskill.Rating(mu=13.048, sigma=1.744)</td>
+        </tr>
+        <tr>
+            <th>191</th>
+            <td>Omar Abdelfattah</td>
+            <td>7.810025</td>
+            <td>13</td>
+            <td>trueskill.Rating(mu=11.705, sigma=1.298)</td>
+        </tr>
+        <tr>
+            <th>192</th>
+            <td>Alaa Festok</td>
+            <td>7.775196</td>
+            <td>12</td>
+            <td>trueskill.Rating(mu=11.737, sigma=1.321)</td>
+        </tr>
+        <tr>
+            <th>193</th>
+            <td>Geoff Headington</td>
+            <td>7.693433</td>
+            <td>3</td>
+            <td>trueskill.Rating(mu=15.644, sigma=2.650)</td>
+        </tr>
+        <tr>
+            <th>194</th>
+            <td>Mario Rodwald</td>
+            <td>7.615688</td>
+            <td>6</td>
+            <td>trueskill.Rating(mu=13.473, sigma=1.952)</td>
+        </tr>
+        <tr>
+            <th>195</th>
+            <td>Enrique Gianello</td>
+            <td>7.574260</td>
+            <td>8</td>
+            <td>trueskill.Rating(mu=12.508, sigma=1.645)</td>
+        </tr>
+        <tr>
+            <th>196</th>
+            <td>Jakub Jurkowski</td>
+            <td>7.554962</td>
+            <td>6</td>
+            <td>trueskill.Rating(mu=12.842, sigma=1.763)</td>
+        </tr>
+        <tr>
+            <th>197</th>
+            <td>Jan Koszowski</td>
+            <td>7.552576</td>
+            <td>6</td>
+            <td>trueskill.Rating(mu=12.841, sigma=1.763)</td>
+        </tr>
+        <tr>
+            <th>198</th>
+            <td>Troy Bower</td>
+            <td>7.514732</td>
+            <td>9</td>
+            <td>trueskill.Rating(mu=13.188, sigma=1.891)</td>
+        </tr>
+        <tr>
+            <th>199</th>
+            <td>Peng Li</td>
+            <td>7.478611</td>
+            <td>6</td>
+            <td>trueskill.Rating(mu=12.790, sigma=1.771)</td>
+        </tr>
+        <tr>
+            <th>200</th>
+            <td>Timothy Murphy</td>
+            <td>7.473766</td>
+            <td>13</td>
+            <td>trueskill.Rating(mu=11.421, sigma=1.316)</td>
+        </tr>
+        <tr>
+            <th>201</th>
+            <td>Huang Qibin</td>
+            <td>7.315240</td>
+            <td>6</td>
+            <td>trueskill.Rating(mu=12.594, sigma=1.759)</td>
+        </tr>
+        <tr>
+            <th>202</th>
+            <td>Sirawit Prangsri</td>
+            <td>7.283308</td>
+            <td>6</td>
+            <td>trueskill.Rating(mu=12.633, sigma=1.783)</td>
+        </tr>
+        <tr>
+            <th>203</th>
+            <td>Wang Qiang</td>
+            <td>7.266676</td>
+            <td>6</td>
+            <td>trueskill.Rating(mu=12.646, sigma=1.793)</td>
+        </tr>
+        <tr>
+            <th>204</th>
+            <td>Jeremie Raffray</td>
+            <td>7.146371</td>
+            <td>14</td>
+            <td>trueskill.Rating(mu=10.915, sigma=1.256)</td>
+        </tr>
+        <tr>
+            <th>205</th>
+            <td>Bitna Kim</td>
+            <td>7.125230</td>
+            <td>23</td>
+            <td>trueskill.Rating(mu=10.607, sigma=1.161)</td>
+        </tr>
+        <tr>
+            <th>206</th>
+            <td>Dmitriy Minaev</td>
+            <td>6.846725</td>
+            <td>6</td>
+            <td>trueskill.Rating(mu=12.134, sigma=1.762)</td>
+        </tr>
+        <tr>
+            <th>207</th>
+            <td>Fung Yang</td>
+            <td>6.631088</td>
+            <td>20</td>
+            <td>trueskill.Rating(mu=9.995, sigma=1.121)</td>
+        </tr>
+        <tr>
+            <th>208</th>
+            <td>Astrid Berz</td>
+            <td>6.564038</td>
+            <td>7</td>
+            <td>trueskill.Rating(mu=11.516, sigma=1.651)</td>
+        </tr>
+        <tr>
+            <th>209</th>
+            <td>Fraser Novakowski</td>
+            <td>6.440466</td>
+            <td>13</td>
+            <td>trueskill.Rating(mu=10.304, sigma=1.288)</td>
+        </tr>
+        <tr>
+            <th>210</th>
+            <td>Hannes Oisterreich</td>
+            <td>6.373841</td>
+            <td>6</td>
+            <td>trueskill.Rating(mu=11.962, sigma=1.863)</td>
+        </tr>
+        <tr>
+            <th>211</th>
+            <td>Albert Jurkowski</td>
+            <td>6.354084</td>
+            <td>6</td>
+            <td>trueskill.Rating(mu=11.628, sigma=1.758)</td>
+        </tr>
+        <tr>
+            <th>212</th>
+            <td>Graeme Simpson</td>
+            <td>6.206590</td>
+            <td>41</td>
+            <td>trueskill.Rating(mu=9.282, sigma=1.025)</td>
+        </tr>
+        <tr>
+            <th>213</th>
+            <td>Mai Desjardins</td>
+            <td>6.184757</td>
+            <td>9</td>
+            <td>trueskill.Rating(mu=10.709, sigma=1.508)</td>
+        </tr>
+        <tr>
+            <th>214</th>
+            <td>Torben Veis</td>
+            <td>6.021767</td>
+            <td>8</td>
+            <td>trueskill.Rating(mu=11.420, sigma=1.800)</td>
+        </tr>
+        <tr>
+            <th>215</th>
+            <td>Cynthia Brown</td>
+            <td>5.812330</td>
+            <td>7</td>
+            <td>trueskill.Rating(mu=10.769, sigma=1.652)</td>
+        </tr>
+        <tr>
+            <th>216</th>
+            <td>Jan Patrick</td>
+            <td>5.759793</td>
+            <td>14</td>
+            <td>trueskill.Rating(mu=9.528, sigma=1.256)</td>
+        </tr>
+        <tr>
+            <th>217</th>
+            <td>Bader Almadini</td>
+            <td>5.709472</td>
+            <td>13</td>
+            <td>trueskill.Rating(mu=9.583, sigma=1.291)</td>
+        </tr>
+        <tr>
+            <th>218</th>
+            <td>Alessio Brasili</td>
+            <td>5.646344</td>
+            <td>7</td>
+            <td>trueskill.Rating(mu=10.518, sigma=1.624)</td>
+        </tr>
+        <tr>
+            <th>219</th>
+            <td>Emile Mazeikaite</td>
+            <td>5.588261</td>
+            <td>11</td>
+            <td>trueskill.Rating(mu=10.124, sigma=1.512)</td>
+        </tr>
+        <tr>
+            <th>220</th>
+            <td>Khalid Festok</td>
+            <td>5.563196</td>
+            <td>13</td>
+            <td>trueskill.Rating(mu=9.469, sigma=1.302)</td>
+        </tr>
+        <tr>
+            <th>221</th>
+            <td>Andrew McManus</td>
+            <td>4.938533</td>
+            <td>7</td>
+            <td>trueskill.Rating(mu=9.945, sigma=1.669)</td>
+        </tr>
+        <tr>
+            <th>222</th>
+            <td>Michael Pepper</td>
+            <td>4.765991</td>
+            <td>18</td>
+            <td>trueskill.Rating(mu=8.286, sigma=1.173)</td>
+        </tr>
+        <tr>
+            <th>223</th>
+            <td>Benjamin Sendra</td>
+            <td>4.701407</td>
+            <td>9</td>
+            <td>trueskill.Rating(mu=9.256, sigma=1.518)</td>
+        </tr>
+        <tr>
+            <th>224</th>
+            <td>Gareth Mullins</td>
+            <td>4.607290</td>
+            <td>18</td>
+            <td>trueskill.Rating(mu=8.115, sigma=1.169)</td>
+        </tr>
+        <tr>
+            <th>225</th>
+            <td>Manuel Olivier</td>
+            <td>4.466422</td>
+            <td>13</td>
+            <td>trueskill.Rating(mu=8.461, sigma=1.332)</td>
+        </tr>
+        <tr>
+            <th>226</th>
+            <td>Joe Pike</td>
+            <td>4.131671</td>
+            <td>3</td>
+            <td>trueskill.Rating(mu=11.669, sigma=2.512)</td>
+        </tr>
+        <tr>
+            <th>227</th>
+            <td>Marjan Saeedi</td>
+            <td>3.995087</td>
+            <td>12</td>
+            <td>trueskill.Rating(mu=8.019, sigma=1.341)</td>
+        </tr>
+        <tr>
+            <th>228</th>
+            <td>Manon Calvignac</td>
+            <td>3.964786</td>
+            <td>12</td>
+            <td>trueskill.Rating(mu=7.974, sigma=1.336)</td>
+        </tr>
+        <tr>
+            <th>229</th>
+            <td>Thomas Byrne Jr</td>
+            <td>3.960481</td>
+            <td>8</td>
+            <td>trueskill.Rating(mu=8.745, sigma=1.595)</td>
+        </tr>
+        <tr>
+            <th>230</th>
+            <td>Hamid Shomali</td>
+            <td>3.840696</td>
+            <td>12</td>
+            <td>trueskill.Rating(mu=7.834, sigma=1.331)</td>
+        </tr>
+        <tr>
+            <th>231</th>
+            <td>Chris Brent</td>
+            <td>3.716058</td>
+            <td>13</td>
+            <td>trueskill.Rating(mu=7.616, sigma=1.300)</td>
+        </tr>
+        <tr>
+            <th>232</th>
+            <td>Fred Hope</td>
+            <td>3.649736</td>
+            <td>7</td>
+            <td>trueskill.Rating(mu=8.920, sigma=1.757)</td>
+        </tr>
+        <tr>
+            <th>233</th>
+            <td>Aurelio Teixeira</td>
+            <td>3.643730</td>
+            <td>9</td>
+            <td>trueskill.Rating(mu=8.248, sigma=1.535)</td>
+        </tr>
+        <tr>
+            <th>234</th>
+            <td>Fahad Almalki</td>
+            <td>3.459284</td>
+            <td>12</td>
+            <td>trueskill.Rating(mu=7.471, sigma=1.337)</td>
+        </tr>
+        <tr>
+            <th>235</th>
+            <td>Andy Umana</td>
+            <td>3.359220</td>
+            <td>12</td>
+            <td>trueskill.Rating(mu=7.549, sigma=1.397)</td>
+        </tr>
+        <tr>
+            <th>236</th>
+            <td>Catherine Dufour</td>
+            <td>3.266717</td>
+            <td>14</td>
+            <td>trueskill.Rating(mu=7.012, sigma=1.248)</td>
+        </tr>
+        <tr>
+            <th>237</th>
+            <td>Kevin Growney</td>
+            <td>3.007810</td>
+            <td>18</td>
+            <td>trueskill.Rating(mu=6.741, sigma=1.244)</td>
+        </tr>
+        <tr>
+            <th>238</th>
+            <td>Max Bonieux</td>
+            <td>2.871194</td>
+            <td>14</td>
+            <td>trueskill.Rating(mu=6.715, sigma=1.281)</td>
+        </tr>
+        <tr>
+            <th>239</th>
+            <td>Loic Le Meur</td>
+            <td>2.823852</td>
+            <td>12</td>
+            <td>trueskill.Rating(mu=6.838, sigma=1.338)</td>
+        </tr>
+        <tr>
+            <th>240</th>
+            <td>Rasmus Guldager</td>
+            <td>2.810486</td>
+            <td>5</td>
+            <td>trueskill.Rating(mu=9.516, sigma=2.235)</td>
+        </tr>
+        <tr>
+            <th>241</th>
+            <td>Julien De Falbaire</td>
+            <td>2.554400</td>
+            <td>14</td>
+            <td>trueskill.Rating(mu=6.375, sigma=1.274)</td>
+        </tr>
+        <tr>
+            <th>242</th>
+            <td>Gael Vuillemin</td>
+            <td>2.399952</td>
+            <td>14</td>
+            <td>trueskill.Rating(mu=6.222, sigma=1.274)</td>
+        </tr>
+        <tr>
+            <th>243</th>
+            <td>Claus Holm</td>
+            <td>2.381432</td>
+            <td>8</td>
+            <td>trueskill.Rating(mu=8.280, sigma=1.966)</td>
+        </tr>
+        <tr>
+            <th>244</th>
+            <td>Sylvain Desjardins</td>
+            <td>2.171384</td>
+            <td>9</td>
+            <td>trueskill.Rating(mu=6.739, sigma=1.522)</td>
+        </tr>
+        <tr>
+            <th>245</th>
+            <td>Jean Bellon</td>
+            <td>2.126047</td>
+            <td>8</td>
+            <td>trueskill.Rating(mu=7.161, sigma=1.678)</td>
+        </tr>
+        <tr>
+            <th>246</th>
+            <td>Tanner Hayes</td>
+            <td>2.053111</td>
+            <td>15</td>
+            <td>trueskill.Rating(mu=5.904, sigma=1.284)</td>
+        </tr>
+        <tr>
+            <th>247</th>
+            <td>Pierluigi Capozzi</td>
+            <td>2.031326</td>
+            <td>7</td>
+            <td>trueskill.Rating(mu=6.951, sigma=1.640)</td>
+        </tr>
+        <tr>
+            <th>248</th>
+            <td>Victor Deblock</td>
+            <td>1.936242</td>
+            <td>7</td>
+            <td>trueskill.Rating(mu=7.029, sigma=1.698)</td>
+        </tr>
+        <tr>
+            <th>249</th>
+            <td>Anastasia Akopova</td>
+            <td>1.834112</td>
+            <td>7</td>
+            <td>trueskill.Rating(mu=6.775, sigma=1.647)</td>
+        </tr>
+        <tr>
+            <th>250</th>
+            <td>Cynthia Cynbad Brown</td>
+            <td>1.678417</td>
+            <td>6</td>
+            <td>trueskill.Rating(mu=8.381, sigma=2.234)</td>
+        </tr>
+        <tr>
+            <th>251</th>
+            <td>Gris Bettle</td>
+            <td>1.172729</td>
+            <td>6</td>
+            <td>trueskill.Rating(mu=6.622, sigma=1.816)</td>
+        </tr>
+        <tr>
+            <th>252</th>
+            <td>Chen Jingle</td>
+            <td>1.150352</td>
+            <td>10</td>
+            <td>trueskill.Rating(mu=6.012, sigma=1.621)</td>
+        </tr>
+        <tr>
+            <th>253</th>
+            <td>Christelle Dejardins</td>
+            <td>1.145382</td>
+            <td>10</td>
+            <td>trueskill.Rating(mu=6.020, sigma=1.625)</td>
+        </tr>
+        <tr>
+            <th>254</th>
+            <td>Romain Castel</td>
+            <td>1.111435</td>
+            <td>7</td>
+            <td>trueskill.Rating(mu=6.176, sigma=1.688)</td>
+        </tr>
+        <tr>
+            <th>255</th>
+            <td>Fabien Saudubray</td>
+            <td>1.033350</td>
+            <td>5</td>
+            <td>trueskill.Rating(mu=7.062, sigma=2.010)</td>
+        </tr>
+        <tr>
+            <th>256</th>
+            <td>Bill Chamberlain</td>
+            <td>0.786647</td>
+            <td>16</td>
+            <td>trueskill.Rating(mu=4.632, sigma=1.282)</td>
+        </tr>
+        <tr>
+            <th>257</th>
+            <td>Morgan Dubouchet</td>
+            <td>0.683959</td>
+            <td>6</td>
+            <td>trueskill.Rating(mu=6.257, sigma=1.858)</td>
+        </tr>
+        <tr>
+            <th>258</th>
+            <td>Fraser Brown</td>
+            <td>0.491955</td>
+            <td>9</td>
+            <td>trueskill.Rating(mu=5.109, sigma=1.539)</td>
+        </tr>
+        <tr>
+            <th>259</th>
+            <td>Remi Delahaye</td>
+            <td>0.410832</td>
+            <td>14</td>
+            <td>trueskill.Rating(mu=4.271, sigma=1.287)</td>
+        </tr>
+        <tr>
+            <th>260</th>
+            <td>Salim Mendez</td>
+            <td>0.060266</td>
+            <td>7</td>
+            <td>trueskill.Rating(mu=5.164, sigma=1.701)</td>
+        </tr>
+        <tr>
+            <th>261</th>
+            <td>John Gomes</td>
+            <td>-0.071095</td>
+            <td>8</td>
+            <td>trueskill.Rating(mu=4.838, sigma=1.637)</td>
+        </tr>
+        <tr>
+            <th>262</th>
+            <td>Julian Thomson</td>
+            <td>-0.269663</td>
+            <td>5</td>
+            <td>trueskill.Rating(mu=6.138, sigma=2.136)</td>
+        </tr>
+        <tr>
+            <th>263</th>
+            <td>Robert Lafleur</td>
+            <td>-0.402481</td>
+            <td>6</td>
+            <td>trueskill.Rating(mu=5.296, sigma=1.899)</td>
+        </tr>
+        <tr>
+            <th>264</th>
+            <td>Anthony Pillinger</td>
+            <td>-0.517039</td>
+            <td>30</td>
+            <td>trueskill.Rating(mu=2.667, sigma=1.061)</td>
+        </tr>
+        <tr>
+            <th>265</th>
+            <td>Pete Morgan</td>
+            <td>-0.627191</td>
+            <td>29</td>
+            <td>trueskill.Rating(mu=2.553, sigma=1.060)</td>
+        </tr>
+        <tr>
+            <th>266</th>
+            <td>Madis Kallas</td>
+            <td>-1.041790</td>
+            <td>7</td>
+            <td>trueskill.Rating(mu=3.947, sigma=1.663)</td>
+        </tr>
+        <tr>
+            <th>267</th>
+            <td>Natalie Clarke</td>
+            <td>-1.467548</td>
+            <td>35</td>
+            <td>trueskill.Rating(mu=1.832, sigma=1.100)</td>
+        </tr>
+        <tr>
+            <th>268</th>
+            <td>Ron Groenewegen</td>
+            <td>-1.639049</td>
+            <td>34</td>
+            <td>trueskill.Rating(mu=1.540, sigma=1.060)</td>
+        </tr>
+        <tr>
+            <th>269</th>
+            <td>Justi Vonada</td>
+            <td>-1.642747</td>
+            <td>6</td>
+            <td>trueskill.Rating(mu=5.073, sigma=2.239)</td>
+        </tr>
+        <tr>
+            <th>270</th>
+            <td>Rachel Callahan</td>
+            <td>-1.646262</td>
+            <td>6</td>
+            <td>trueskill.Rating(mu=5.082, sigma=2.243)</td>
+        </tr>
+        <tr>
+            <th>271</th>
+            <td>James Shanahan</td>
+            <td>-1.760669</td>
+            <td>7</td>
+            <td>trueskill.Rating(mu=3.415, sigma=1.725)</td>
+        </tr>
+        <tr>
+            <th>272</th>
+            <td>Brooke Williams</td>
+            <td>-1.906154</td>
+            <td>6</td>
+            <td>trueskill.Rating(mu=3.991, sigma=1.966)</td>
+        </tr>
+        <tr>
+            <th>273</th>
+            <td>Camille Salvinien</td>
+            <td>-1.971184</td>
+            <td>13</td>
+            <td>trueskill.Rating(mu=1.986, sigma=1.319)</td>
+        </tr>
+        <tr>
+            <th>274</th>
+            <td>Nathan Boyes</td>
+            <td>-2.243626</td>
+            <td>22</td>
+            <td>trueskill.Rating(mu=1.128, sigma=1.124)</td>
+        </tr>
+        <tr>
+            <th>275</th>
+            <td>Mark Todd</td>
+            <td>-2.370191</td>
+            <td>9</td>
+            <td>trueskill.Rating(mu=2.192, sigma=1.521)</td>
+        </tr>
+        <tr>
+            <th>276</th>
+            <td>Whit Whitacre</td>
+            <td>-2.664527</td>
+            <td>3</td>
+            <td>trueskill.Rating(mu=4.933, sigma=2.532)</td>
+        </tr>
+        <tr>
+            <th>277</th>
+            <td>Steve Bodner</td>
+            <td>-3.052148</td>
+            <td>8</td>
+            <td>trueskill.Rating(mu=2.003, sigma=1.685)</td>
+        </tr>
+        <tr>
+            <th>278</th>
+            <td>Tim Forbes-Smith</td>
+            <td>-3.077832</td>
+            <td>37</td>
+            <td>trueskill.Rating(mu=0.128, sigma=1.069)</td>
+        </tr>
+        <tr>
+            <th>279</th>
+            <td>Brett Kotelko</td>
+            <td>-3.380693</td>
+            <td>27</td>
+            <td>trueskill.Rating(mu=-0.046, sigma=1.112)</td>
+        </tr>
+        <tr>
+            <th>280</th>
+            <td>Peter Grendler</td>
+            <td>-3.562497</td>
+            <td>8</td>
+            <td>trueskill.Rating(mu=1.558, sigma=1.707)</td>
+        </tr>
+        <tr>
+            <th>281</th>
+            <td>Simon Savage</td>
+            <td>-3.819260</td>
+            <td>14</td>
+            <td>trueskill.Rating(mu=0.129, sigma=1.316)</td>
+        </tr>
+        <tr>
+            <th>282</th>
+            <td>Enrico Leporati</td>
+            <td>-5.213586</td>
+            <td>7</td>
+            <td>trueskill.Rating(mu=-0.072, sigma=1.714)</td>
+        </tr>
+        <tr>
+            <th>283</th>
+            <td>Matt Esh</td>
+            <td>-5.630693</td>
+            <td>4</td>
+            <td>trueskill.Rating(mu=2.712, sigma=2.781)</td>
+        </tr>
+        <tr>
+            <th>284</th>
+            <td>Rui Pombeiro</td>
+            <td>-5.858152</td>
+            <td>14</td>
+            <td>trueskill.Rating(mu=-1.823, sigma=1.345)</td>
+        </tr>
+        <tr>
+            <th>285</th>
+            <td>Jean-Yves Fievet</td>
+            <td>-5.972299</td>
+            <td>14</td>
+            <td>trueskill.Rating(mu=-1.899, sigma=1.358)</td>
+        </tr>
+        <tr>
+            <th>286</th>
+            <td>Richard Barber</td>
+            <td>-7.383334</td>
+            <td>6</td>
+            <td>trueskill.Rating(mu=-1.523, sigma=1.954)</td>
+        </tr>
+        <tr>
+            <th>287</th>
+            <td>Federico Aguilar</td>
+            <td>-7.835922</td>
+            <td>6</td>
+            <td>trueskill.Rating(mu=-2.121, sigma=1.905)</td>
+        </tr>
+        <tr>
+            <th>288</th>
+            <td>Ryan Druyor</td>
+            <td>-8.347789</td>
+            <td>4</td>
+            <td>trueskill.Rating(mu=-0.984, sigma=2.455)</td>
+        </tr>
+        <tr>
+            <th>289</th>
+            <td>Fabio Turra</td>
+            <td>-8.404379</td>
+            <td>7</td>
+            <td>trueskill.Rating(mu=-3.038, sigma=1.789)</td>
+        </tr>
+        <tr>
+            <th>290</th>
+            <td>Jose Umana</td>
+            <td>-9.260206</td>
+            <td>3</td>
+            <td>trueskill.Rating(mu=-1.111, sigma=2.717)</td>
+        </tr>
+        <tr>
+            <th>291</th>
+            <td>Alessandro Alberti</td>
+            <td>-11.261821</td>
+            <td>6</td>
+            <td>trueskill.Rating(mu=-5.259, sigma=2.001)</td>
+        </tr>
+        <tr>
+            <th>292</th>
+            <td>Jose Fazio</td>
+            <td>-12.200162</td>
+            <td>5</td>
+            <td>trueskill.Rating(mu=-5.427, sigma=2.258)</td>
+        </tr>
+    </tbody>
+</table>
+
+
+
+</body>
+</html>
